@@ -60,20 +60,6 @@ function draw() {
   drawSprites();
 }
 
-function keyPressed() { 
-	if (keyCode === UP_ARROW) 
-	{ Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-360,y:-120}); } 
-
-if (keyCode === DOWN_ARROW) 
-	{ Matter.Body.applyForce(bob5.body,bob5.body.position,{x:360,y:120}); } 
-} 
-
-	function drawLine(constraint) { 
-		bobPosition = constraint.bodyA.position 
-		roofPosition = constraint.bodyB.position 
-		roofBodyOffset = constraint.pointB; 
-		roofBodyX = roofBodyPosition.x + roofBodyOffset.x 
-		roofBodyY = roofBodyPosition.y + roofBodyOffset.y 
-		line(bobBodyPosition.x, bobBodyPosition.y, roofBodyX, roofBodyY); 
-	}
-
+function mouseDragged(){
+matter.Body.setPosition(penduluml.body, {x: mouseX, y: mouseY});
+}
