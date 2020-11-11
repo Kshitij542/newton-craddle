@@ -41,7 +41,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background("#004D40");
+  background("#0000FE");
   Engine.update(engine);
   
   bob1.display();
